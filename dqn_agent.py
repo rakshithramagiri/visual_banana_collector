@@ -92,7 +92,7 @@ class DQN_AGENT:
         """
         states, actions, rewards, next_states, dones = experiences
 
-        targets = self.target_network(next_states).detach().max(1)[0].unsqueeze(1)
+        targets = self.target_network(next_states).detach().max(1)[0]
         targets = rewards + (GAMMA * targets * (1-dones))
         chosen_actions = self.learning_network(states).gather(1, actions)
 
