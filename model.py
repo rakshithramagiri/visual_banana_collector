@@ -12,7 +12,7 @@ class DQN_MODEL(nn.Module):
             action_size    - action space size.
             seed           - random number generator seed value.
             hidden         - number of hidden units.
-            filters        - convolution filters for ConvNet. 
+            filters        - convolution filters for ConvNet.
         """
         super(DQN_MODEL, self).__init__()
 
