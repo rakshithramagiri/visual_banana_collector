@@ -54,5 +54,6 @@ class DQN_MODEL(nn.Module):
             state - current enviroment state.
         """
         output = self.conv_layers(state)
+        output = output.view(-1, 7*7*64)
         output = self.fc(output)
         return output
