@@ -6,7 +6,7 @@ from collections import namedtuple, deque
 from model import DQN_MODEL
 
 
-DEVICE = 'cpu' # CPU's are faster for Unity Environments
+DEVICE = 'cuda:0'
 BUFFER_SIZE = int(1e5)
 BATCH_SIZE = 64
 LR = 5e-4
